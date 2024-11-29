@@ -27,11 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
+    'rest_framework',
+    'django_tables2',
+    'jazzmin',
     'CRM',
+    'gestion_de_materiales',
     'INVENTARIOS',
     'COMPRAS',
     'DISTRIBUCIÓN',
@@ -80,13 +84,15 @@ WSGI_APPLICATION = 'AgroAlimentos.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'BDERP',
+        'NAME': 'bderp',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+
+
 
 
 # Password validation

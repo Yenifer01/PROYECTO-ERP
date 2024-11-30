@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django_tables2',
     'jazzmin',
     'CRM',
+    'solicitudes_de_pedidos',
     'gestion_de_materiales',
     'INVENTARIOS',
     'COMPRAS',
@@ -91,8 +92,6 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
-
 
 
 # Password validation

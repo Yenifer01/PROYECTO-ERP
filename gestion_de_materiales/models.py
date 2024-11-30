@@ -39,7 +39,7 @@ class Material(models.Model):
 
     ALMACEN_CHOICES = [
         ('A01','A01'),
-        ('A02','A01'),
+        ('A02','A02'),
     ]
     almacen = models.CharField(max_length=3, choices=ALMACEN_CHOICES, verbose_name="Almacén")
 

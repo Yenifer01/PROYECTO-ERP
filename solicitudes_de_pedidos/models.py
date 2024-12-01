@@ -22,6 +22,7 @@ class SolicitudPedido(models.Model):
         through='SolicitudPedidoMaterial',
         related_name='solicitudes_pedido'
     )
+
     def save(self, *args, **kwargs):
         if not self.pk:
             super().save(*args, **kwargs) 

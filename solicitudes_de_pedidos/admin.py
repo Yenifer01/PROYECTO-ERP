@@ -20,7 +20,6 @@ class SolicitudPedidoAdmin(admin.ModelAdmin):
     ]
     search_fields = ['codigo_solicitud', 'tipo_solicitud']
     
-
     def mostrar_materiales(self, obj):
         materiales = obj.materiales.all()
         return ", ".join([str(material.codigo_material) for material in materiales])
@@ -39,7 +38,7 @@ class SolicitudPedidoAdmin(admin.ModelAdmin):
             )
         else:
             super().save_model(request, obj, form, change)
-
+  
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
         queryset = queryset.prefetch_related('materiales') 
